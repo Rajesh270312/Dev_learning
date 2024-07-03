@@ -72,7 +72,7 @@ function PricingSection()  {
       
     
       return (
-        <div style={{display:"flex",justifyContent:"center"}}>
+        <div style={{display:"flex",justifyContent:"center",paddingTop:"10px"}}>
             <div className="home-pricing-section">
                 <div className="home-pricing-heading">
                     <div>
