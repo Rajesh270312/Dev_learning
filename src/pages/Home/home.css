@@ -1,0 +1,151 @@
+.promotion {
+    display: flex;
+    align-self: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5% auto;
+    height: auto;
+    border-radius: 8px ;
+    border: 1px solid rgba(241, 241, 243, 1);
+    background: rgba(252, 252, 253, 1);
+    color: rgb(255, 255, 255);
+}
+  
+  .promotion-content {
+    display: flex;
+    animation: scroll 10s linear infinite;
+  }
+  
+  .promotion-content img {
+    height: 50px; /* Adjust based on your logo size */
+    margin: 20px; /* Space between logos */
+  }
+  
+@media (max-width: 768px) {
+    .promotion-content img {
+        height: 20px;
+        margin: 5px;
+    }
+}
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .promotion-content::before,
+.promotion-content::after {
+  content: '';
+  display: inline-block;
+}
+
+.promotion-content::before {
+  order: -1; /* Position it at the start */
+}
+
+.promotion-content::after {
+  order: 1; /* Position it at the end */
+}
+
+
+.Benefitheading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  margin: 5% auto;
+  gap: 10px; 
+}
+
+.BenefitBox {
+  display: flex;
+  flex-direction: column;
+  align-self:center;
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 5%;
+
+}
+
+.Cardgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.Coursegrid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .Cardgrid, .Coursegrid {
+      grid-template-columns: 2fr;
+      justify-content: center;
+      box-sizing: border-box;
+  }
+}
+.home-pricing-section {
+  font-family: 'Be Vietnam Pro',sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(247, 247, 248, 1);
+}
+
+.home-pricing-section h2 {
+  margin-bottom: 10px;
+}
+
+.home-pricing-section p {
+  margin-bottom: 20px;
+  color: rgba(89, 89, 90, 1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background: rgba(255, 255, 255, 1);
+  align-self: center;
+  border-radius: 6px;
+}
+
+.home-plans-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* padding: 5px; */
+  padding-top: 30px ;
+  padding-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.home-pricing-heading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px; 
+}
+
+@media (max-width: 768px) {
+  .home-pricing-heading {
+      flex-direction: column;
+  }
+}

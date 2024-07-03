@@ -1,0 +1,133 @@
+.contact-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid rgba(228, 228, 231, 1);
+    text-align: left;
+}
+.contact-banner h1,
+.contact-banner p {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color:rgba(247, 247, 248, 1);
+  }
+    
+  .contact-form {
+    flex: 2;
+    padding: 20px;
+    border-radius: 20px 20px 0 0; 
+    background-color: white;
+  }
+  
+  .contact-info {
+    flex: 1;
+    padding: 40px;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    gap: 20px;
+
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    gap: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(252, 252, 253, 1);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: rgba(252, 252, 253, 1);
+    border: 1px solid rgba(241, 241, 243, 1);
+    margin-bottom: 20px;
+  }
+  
+  .info-item .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+}
+  
+  @media (min-width: 768px) {
+    .contact-banner {
+      flex-direction: row;
+      justify-content: center;
+      text-align: left;
+      padding: 100px 50px 50px;
+  }
+   .contact-banner h1,
+   .contact-banner p {
+        width: 45%;
+   }
+   .contact-container {
+    flex-direction: row;
+}
+
+.contact-form {
+    border-radius: 20px 0 0 20px;
+    padding: 60px;
+}
+
+.contact-info {
+    border-radius: 0 20px 20px 0;
+}
+
+.form-row {
+    flex-direction: row;
+}
+  }
+  

@@ -1,0 +1,75 @@
+.BenefitCard {
+    font-family: 'Be Vietnam Pro',sans-serif;
+    color: rgba(38, 38, 38, 1);
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* margin-top: 20px; */
+    /* width: 10rem; */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+} 
+
+
+.icon1 {  
+    display: flex;
+    justify-content: flex-end;
+    transition: background-color 0.3s;
+    height:  54px;
+    padding: 14px ;
+    gap: 8px; 
+    border-radius: 6px ;
+    border-style: none;
+    color: rgba(252, 252, 253, 1);
+}
+
+
+@media (max-width: 768px) {
+    .Card {
+        width: calc(50% - 40px);
+    }
+}
+@media (max-width: 480px) {
+    .Card {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+.Card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+.title1 {
+
+    font-family: 'Be Vietnam Pro',sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: right;
+    color: rgba(38, 38, 38, 1);
+    
+    
+    }
+    
+.Benefitname {
+    font-family: 'Be Vietnam Pro',sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.006em;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+
+
+}
+.content {
+    font-family: 'Be Vietnam Pro',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(76, 76, 77, 1);
+}

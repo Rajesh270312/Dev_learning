@@ -1,0 +1,70 @@
+.Hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-top: 5%;
+    display: flex;
+    width: 50%;
+    height: 25%;
+    gap: 50px;
+    opacity: 0px;
+
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    height: 60%;
+    gap: 16px;
+    opacity: 0px;
+
+}
+
+.SubContainer {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 12%;
+    padding: 12px 24px 12px 12px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px ;
+    opacity: 0px;
+    background: #FCFCFD;
+    border: 1px solid #F1F1F3;
+    font-family: 'Be Vietnam Pro',sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+
+}
+
+.TextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    /* gap: 6px; */
+    font-family: 'Be Vietnam Pro',sans-serif;
+    color : rgba(38, 38, 38, 1);
+}
+
+.target {
+
+    font-family: 'Be Vietnam Pro',sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    text-align: center;
+    color: #FF9500;
+}
+
+.Buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}

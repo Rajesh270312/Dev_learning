@@ -1,0 +1,118 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    gap: 40px;
+  }
+  
+  .login {
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 40%;
+    background-color: white;
+    min-width: 300px;
+  }
+
+  .login-testimonial {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    min-width: 300px;
+  }
+
+  
+  .login-form-group {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .login-form-group-remember {
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .login-form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-form-group input[type="email"], 
+  .login-form-group input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color:  rgba(255, 149, 0, 1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  .login-with-google {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .login-with-google button {
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .testimonial-content {
+    margin-top: 20px;
+  }
+  
+  
+
+  @media (max-width: 968px) {
+    .login-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .login,
+    .login-testimonial {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .login {
+      order: 1;
+      margin-bottom: 20px;
+    }
+  
+    .login-testimonial {
+      order: 2;
+    }  
+  }
+
+  @media (max-width: 480px) {
+    .login,
+    .login-testimonial {
+      padding: 20px;
+      min-width: auto;
+    }
+  }
+  

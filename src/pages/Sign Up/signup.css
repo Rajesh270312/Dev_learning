@@ -1,0 +1,96 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  gap: 40px;
+}
+
+.signup {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 40%;
+  background-color: white;
+  min-width: 300px;
+}
+
+.signup-testimonial {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  min-width: 300px;
+}
+
+.signup-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.signup-group-TnC {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.signup-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signup-group input[type="email"],
+.signup-group input[type="password"],
+.signup-group input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 149, 0, 1);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.testimonial-content-signup {
+  margin-top: 20px;
+}
+
+@media (max-width: 968px) {
+  .signup-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup,
+  .signup-testimonial {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .signup {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .signup-testimonial {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup,
+  .signup-testimonial {
+    padding: 20px;
+    min-width: auto;
+  }
+}
