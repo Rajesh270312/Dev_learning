@@ -1,7 +1,7 @@
 .footer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: rgb(204, 200, 200);
+    background-color: rgb(255, 255, 255);
     position: relative;
     bottom: 0;
     padding: 20px;
@@ -73,7 +73,7 @@
     padding: 14px;
     gap: 10px;
     border-radius: 8px;
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .footersvg {
@@ -85,6 +85,11 @@
     line-height: 24px;
     text-align: left;
     margin: 5px;
+}
+
+.footersvg a { 
+    color: #FF9500;
+    text-decoration: none;
 }
 
 .logo1 {

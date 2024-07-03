@@ -7,7 +7,7 @@ export function Pricingcard({ title, price, features, buttonLabel }){
             <div className="plan-header">
                 <h3>{title}</h3>
                 <div className="plan-price">{price}
-                    <span className="plan-price-unit">/month</span>
+                    <span className="plan-price-unit"></span>
                 </div>
             </div>
             <ul className="plan-features">
@@ -23,6 +23,10 @@ export function Pricingcard({ title, price, features, buttonLabel }){
         
     )
 }
+
+
+
+
 
      
 

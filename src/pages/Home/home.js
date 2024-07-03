@@ -9,7 +9,7 @@ import { CoursesCard } from "../../components/CoursesCard/CoursesCard";
 import { Testimonialcard } from "../../components/testimonialcard/Testimonialcard";
 import { Pricingcard } from "../../components/Pricingcard/Pricingcard";
 import { FAQ } from "../../layout/FAQ/FAQ";
-
+import React,{useState} from "react";
 
 
 export function Home(){
@@ -176,25 +176,54 @@ function increase(){
 
 
 function PricingSection()  {
-  const freePlanFeatures = [
-    { text: 'Access to selected free courses.', included: true },
-    { text: 'Limited course materials and resources.', included: true },
-    { text: 'Basic community support.', included: true },
-    { text: 'No certification upon completion.', included: true },
-    { text: 'Ad-supported platform.', included: true },
-    { text: 'Access to exclusive Pro Plan community forums.', included: false },
-    { text: 'Early access to new courses and updates.', included: false },
-  ];
+const [isYearly,setIsYearly] = useState(false);
+  
+        const freePlanFeaturesYearly = [
+            { text: 'Access to selected free courses.', included: true },
+            { text: 'Limited course materials and resources.', included: true },
+            { text: 'Basic community support.', included: true },
+            { text: 'No certification upon completion.', included: true },
+            { text: 'Ad-supported platform.', included: false },
+            { text: 'Access to exclusive Pro Plan community forums.', included: false },
+            { text: 'Early access to new courses and updates.', included: false },
+          ];
+        
+          const proPlanFeaturesYearly = [
+            { text: 'Unlimited access to all courses.', included: true },
+            { text: 'Unlimited course materials and resources.', included: true },
+            { text: 'Priority support from instructors.', included: true },
+            { text: 'Course completion certificates.', included: true },
+            { text: 'Ad-free experience.', included: true },
+            { text: 'Access to exclusive Pro Plan community forums.', included: true },
+            { text: 'Early access to new courses and updates.', included: true },
+          ];
+   
 
-  const proPlanFeatures = [
-    { text: 'Unlimited access to all courses.', included: true },
-    { text: 'Unlimited course materials and resources.', included: true },
-    { text: 'Priority support from instructors.', included: true },
-    { text: 'Course completion certificates.', included: true },
-    { text: 'Ad-free experience.', included: true },
-    { text: 'Access to exclusive Pro Plan community forums.', included: true },
-    { text: 'Early access to new courses and updates.', included: true },
-  ];
+
+
+        const freePlanFeaturesMonthly = [
+            { text: 'Access to selected free courses.', included: true },
+            { text: 'Limited course materials and resources.', included: true },
+            { text: 'Basic community support.', included: true },
+            { text: 'No certification upon completion.', included: true },
+            { text: 'Ad-supported platform.', included: false },
+            { text: 'Access to exclusive Pro Plan community forums.', included: false },
+            { text: 'Early access to new courses and updates.', included: false },
+          ];
+        
+          const proPlanFeaturesMonthly = [
+            { text: 'Unlimited access to all courses.', included: true },
+            { text: 'Unlimited course materials and resources.', included: true },
+            { text: 'Priority support from instructors.', included: true },
+            { text: 'Course completion certificates.', included: true },
+            { text: 'Ad-free experience.', included: true },
+            { text: 'Access to exclusive Pro Plan community forums.', included: true },
+            { text: 'Early access to new courses and updates.', included: false },
+          ];
+ 
+
+
+  
 
   return (
     <div style={{display:"flex",justifyContent:"center"}}>
@@ -206,24 +235,24 @@ function PricingSection()  {
                 </div>
                 
                 <div className="home-toggle-buttons">
-                    <Button2>Monthly</Button2>
-                    <Button1>Yearly</Button1>
+                    <Button2 onClick={() => setIsYearly(false)}>Monthly</Button2>
+                    <Button1 onClick={() => setIsYearly(true)}>Yearly</Button1>
                 </div>
             </div>
-            <div className="home-plans-container">
-                <Pricingcard
-                title="Free Plan"
-                price="$0"
-                features={freePlanFeatures}
-                buttonLabel="Get Started"
-                />
-                <Pricingcard
-                title="Pro Plan"
-                price="$79"
-                features={proPlanFeatures}
-                buttonLabel="Get Started"
-                />
-        </div>
+            <div className="pricing-plans-container">
+                    <Pricingcard
+                        title="Free Plan"
+                        price={isYearly ? "$0/year" : "$0/month"}
+                        features={isYearly ? freePlanFeaturesYearly : freePlanFeaturesMonthly}
+                        buttonLabel="Get Started"
+                    />
+                    <Pricingcard
+                        title="Pro Plan"
+                        price={isYearly ? "$499/year" : "$79/month"}
+                        features={isYearly ? proPlanFeaturesYearly : proPlanFeaturesMonthly}
+                        buttonLabel="Get Started"
+                    />
+                </div>
         </div>
       
     </div>

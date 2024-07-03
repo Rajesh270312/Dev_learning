@@ -5,6 +5,8 @@ import { Topbar } from "../../layout/Topbar/topbar";
 import { FAQ } from "../../layout/FAQ/FAQ";
 import './Pricing.css'
 import { Button1, Button2 } from "../../components/button/button";
+import React ,{ useState } from "react";
+
 export function Pricing(){
     return (
         <div style={{
@@ -20,52 +22,86 @@ export function Pricing(){
 }
 
 function PricingSection()  {
-    const freePlanFeatures = [
-      { text: 'Access to selected free courses.', included: true },
-      { text: 'Limited course materials and resources.', included: true },
-      { text: 'Basic community support.', included: true },
-      { text: 'No certification upon completion.', included: true },
-      { text: 'Ad-supported platform.', included: true },
-      { text: 'Access to exclusive Pro Plan community forums.', included: false },
-      { text: 'Early access to new courses and updates.', included: false },
-    ];
-  
-    const proPlanFeatures = [
-      { text: 'Unlimited access to all courses.', included: true },
-      { text: 'Unlimited course materials and resources.', included: true },
-      { text: 'Priority support from instructors.', included: true },
-      { text: 'Course completion certificates.', included: true },
-      { text: 'Ad-free experience.', included: true },
-      { text: 'Access to exclusive Pro Plan community forums.', included: true },
-      { text: 'Early access to new courses and updates.', included: true },
-    ];
-  
-    return (
-        <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
-             <div className="pricing-section">
-                <h1>Our Pricing</h1>
-                <p>Welcome to SkillBridge's Pricing Plan page, where we offer two comprehensive options to cater to your needs: Free and Pro. We believe in providing flexible and affordable pricing options for our services. Whether you're an individual looking to enhance your skills or a business seeking professional development solutions, we have a plan that suits you. Explore our pricing options below and choose the one that best fits your requirements.</p>
-              </div>  
-
-                <div className="pricing-toggle-buttons">
-                    <Button2>Monthly</Button2>
-                    <Button1>Yearly</Button1>
+    const [isYearly,setIsYearly] = useState(false);
+      
+            const freePlanFeaturesYearly = [
+                { text: 'Access to selected free courses.', included: true },
+                { text: 'Limited course materials and resources.', included: true },
+                { text: 'Basic community support.', included: true },
+                { text: 'No certification upon completion.', included: true },
+                { text: 'Ad-supported platform.', included: false },
+                { text: 'Access to exclusive Pro Plan community forums.', included: false },
+                { text: 'Early access to new courses and updates.', included: false },
+              ];
+            
+              const proPlanFeaturesYearly = [
+                { text: 'Unlimited access to all courses.', included: true },
+                { text: 'Unlimited course materials and resources.', included: true },
+                { text: 'Priority support from instructors.', included: true },
+                { text: 'Course completion certificates.', included: true },
+                { text: 'Ad-free experience.', included: true },
+                { text: 'Access to exclusive Pro Plan community forums.', included: true },
+                { text: 'Early access to new courses and updates.', included: true },
+              ];
+       
+    
+    
+    
+            const freePlanFeaturesMonthly = [
+                { text: 'Access to selected free courses.', included: true },
+                { text: 'Limited course materials and resources.', included: true },
+                { text: 'Basic community support.', included: true },
+                { text: 'No certification upon completion.', included: true },
+                { text: 'Ad-supported platform.', included: false },
+                { text: 'Access to exclusive Pro Plan community forums.', included: false },
+                { text: 'Early access to new courses and updates.', included: false },
+              ];
+            
+              const proPlanFeaturesMonthly = [
+                { text: 'Unlimited access to all courses.', included: true },
+                { text: 'Unlimited course materials and resources.', included: true },
+                { text: 'Priority support from instructors.', included: true },
+                { text: 'Course completion certificates.', included: true },
+                { text: 'Ad-free experience.', included: true },
+                { text: 'Access to exclusive Pro Plan community forums.', included: true },
+                { text: 'Early access to new courses and updates.', included: false },
+              ];
+     
+    
+    
+      
+    
+      return (
+        <div style={{display:"flex",justifyContent:"center"}}>
+            <div className="home-pricing-section">
+                <div className="home-pricing-heading">
+                    <div>
+                        <h2>Our Pricing</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</p>
+                    </div>
+                    
+                    <div className="home-toggle-buttons">
+                        <Button2 onClick={() => setIsYearly(false)}>Monthly</Button2>
+                        <Button1 onClick={() => setIsYearly(true)}>Yearly</Button1>
+                    </div>
                 </div>
-
-            <div className="pricing-plans-container">
-                <Pricingcard
-                    title="Free Plan"
-                    price="$0"
-                    features={freePlanFeatures}
-                    buttonLabel="Get Started"
-                />
-                <Pricingcard
-                    title="Pro Plan"
-                    price="$79"
-                    features={proPlanFeatures}
-                    buttonLabel="Get Started"
-                />
-             </div>
+                <div className="pricing-plans-container">
+                        <Pricingcard
+                            title="Free Plan"
+                            price={isYearly ? "$0/year" : "$0/month"}
+                            features={isYearly ? freePlanFeaturesYearly : freePlanFeaturesMonthly}
+                            buttonLabel="Get Started"
+                        />
+                        <Pricingcard
+                            title="Pro Plan"
+                            price={isYearly ? "$499/year" : "$79/month"}
+                            features={isYearly ? proPlanFeaturesYearly : proPlanFeaturesMonthly}
+                            buttonLabel="Get Started"
+                        />
+                    </div>
+            </div>
+          
         </div>
-    );
-  };
+       
+      );
+    };

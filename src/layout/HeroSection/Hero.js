@@ -19,7 +19,7 @@ export function HeroSection(){
         <div className="Hero">
             <div className="Container">
                 <div className="SubContainer">
-                    <img src="Screenshot 2024-06-20 155554.png" className='icon' alt=''/>
+                <img src="Screenshot 2024-06-20 155554.png" className='heroicon' alt=''/>
                     <div><span className='target'>Unlock</span> Your Creative Potential</div>
                 </div>
                 <div className="TextContainer">
