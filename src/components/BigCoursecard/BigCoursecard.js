@@ -11,9 +11,9 @@ export function BigCoursecard() {
         <button className="view-course">View Course</button>
       </div>
       <div className="big-course-images">
-        <img src="course1.png" alt="Course Image 1" />
-        <img src="course2.png" alt="Course Image 2" />
-        <img src="course3.png" alt="Course Image 3" />
+        <img src="course1.png" alt="1" />
+        <img src="course2.png" alt="2" />
+        <img src="course3.png" alt="3" />
       </div>
       <div className="big-course-info">
         <div className="duration">

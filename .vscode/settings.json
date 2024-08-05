@@ -1,0 +1,5 @@
+{
+    "editor.suggest.showStatusBar": true,
+    "cmake.options.statusBarVisibility": "visible",
+    "problems.showCurrentInStatus": true
+}

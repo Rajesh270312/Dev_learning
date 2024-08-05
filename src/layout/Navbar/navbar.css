@@ -1,3 +1,27 @@
+.user_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff9c3f;  /* You can change this color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
 
 .navbar {
     width: 100%;
